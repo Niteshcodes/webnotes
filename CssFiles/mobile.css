@@ -1,0 +1,160 @@
+@media only screen and (max-width: 815px) {
+
+    /* For mobile phones: */
+    section#intro{
+        height: 100vh;
+       }
+    #menu-bar{
+        display: flex;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 1em;
+        font-size: 1.5em;
+        
+
+        /* margin: 1em; */
+
+      }
+   #nav{
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    height: 100vh;
+
+   }
+   .dropdown-content a {
+    font-size: 1em;
+}
+   
+
+   nav ul{
+    flex-direction: column;
+   }
+   nav ul li{
+    margin: 1em;
+    font-size: 3em;
+   }
+   nav ul li a{
+    font-size: 0.5em;
+   }
+   .dropdown .dropbtn{
+    font-size: 1.5em;
+   }
+   #close-menu{
+    filter: opacity(1);
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1em;
+    font-size: 1.5em;
+    
+   }
+   #menu{
+    display: none;
+    flex-direction: column;
+    height: 100vh;
+    
+    
+   }
+   #menu ul{
+    padding: 12px;
+   }
+
+   #contect{
+    height: fit-content;
+   }
+   .form{
+    margin: 1.3em auto;
+    width: 70%;
+   }
+   .textbox{
+    width: 51vw;
+   }
+   textarea{
+    width:51vw;
+   }
+  }
+  
+  @media only screen and (max-width: 400px) {
+    section#intro{
+        padding: 0;
+    }
+    
+       .left h1 {
+        color: rgb(21, 209, 226);
+        font-size: 2em;
+    }
+    .left p {
+        padding: 3% 0;
+        font-size: 0.7em;
+    }
+    .left  {
+        padding: 0% 0;
+        margin: auto;
+        font-size: 0.9em;
+    }
+    #menu-bar{
+        display: flex;
+      
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 1em;
+        font-size: 1.5em;
+
+        /* margin: 1em; */
+
+      }
+   #nav{
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    height: 100vh;
+
+   }
+   .dropdown-content a {
+    font-size: 1em;
+}
+   
+
+   nav ul{
+    flex-direction: column;
+   }
+   nav ul li{
+    margin: 1em;
+    font-size: 3em;
+   }
+   nav ul li a{
+    font-size: 0.5em;
+   }
+   .dropdown .dropbtn{
+    font-size: 1.5em;
+   }
+   #close-menu{
+    filter: opacity(1);
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1em;
+    font-size: 1.5em;
+    
+   }
+
+   #ted{
+    position: relative;
+    font-size: 3em;
+    top: 12vh;
+   }
+
+   #contect .form{
+    margin-top: 20vh;
+    width: 90vw;
+   }
+   #contect{
+    font-size: 0.71em;
+    /* height: 100vh; */
+   }
+  }
+    
+  

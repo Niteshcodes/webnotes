@@ -1,0 +1,58 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    background-image: url(../../../img/form.jpg);
+    margin: auto;
+    /* padding: 0; */
+    
+
+}
+#HTML-Main{
+    background-image: linear-gradient(rgb(81, 240, 230),rgb(220, 130, 130));
+    height: 90vh;
+    margin: 0;
+    /* padding: 30vh auto; */
+   margin: auto;
+    
+}
+
+
+#login-head h2{
+
+
+    font-size: 2em;
+    margin-top:1em ;
+
+    color: rgb(206, 60, 225);
+}
+
+input{
+    padding: 0.31em 0.11em;
+    border: 2px solid rgb(118, 85, 85);
+    border-radius: 6px;
+    
+}
+label h2{
+    color: rgb(205, 84, 84);
+    font-size: 1em;
+    
+}
+label{
+    margin: 12px auto;
+}
+
+input[type=button]{
+    width: fit-content;
+    padding: 0.32em 1em;
+    background-color: blue;
+    color: white;
+    border: none;
+    margin-top:0.21em ;
+    cursor: pointer;
+}
+input[type=button]:hover{
+   color: blue;
+   background-color: white;
+   font-weight: bold;
+}

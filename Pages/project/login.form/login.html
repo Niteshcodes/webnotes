@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+            integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <link rel="shortcut icon" href="../../../img/logo.png" type="image/x-icon">
+        <link rel="stylesheet" href="../../../CssFiles/style.css">
+        <link rel="stylesheet" href="../../../Pages/jsNotes/styles.css" />
+        <link rel="stylesheet" href="../../../CssFiles/mobile.css">
+        <link rel="stylesheet" href="login.css">
+        <title>CSS-Notes</title>
+
+        <body>
+
+            <nav id="menu">
+                <ul type="none">
+                    <img src="../../../img/logo.png" d alt="logo" />
+                    <li><a href="../../../index.html#main"> Home</a></li>
+                    <div class="dropdown">
+                        <button class="dropbtn">Notes
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="../../../Pages/htmlNotes/html.html">HTML</a>
+                            <a href="../../cssNotes/css.html">CSS</a>
+                            <a href="../../../Pages/jsNotes/js.html">JavaScript</a>
+                            <a href="../../../Pages/project/project.html">Projects</a>
+                        </div>
+                    </div>
+                    <li><a href="../../../index.html#contect">Contect us</a> </li>
+                </ul>
+
+                <div class="moon">
+                    <label class="switch" id="theme-icon">
+                        <input type="checkbox" id="checkbox" checked >
+                        <span class="slider round"></span>
+                      </label>
+                </div>
+                <i id="close-menu" class="fa fa-times" aria-hidden="true" ></i>
+
+            </nav>
+
+            <main id="HTML-Main">
+                <section id="introduction">
+                    <i class="fa fa-bars" aria-hidden="true" id="menu-bar"></i>
+                </section>
+                <div class="form">
+                    <div id="login-head">
+                        <h2>Login</h2>
+                    </div>
+                    <form action="#" method="post">
+                        <label for="Username">
+                            <h2 id="Username">Username</h2>
+                            <input type="text" placeholder="username">
+
+                        </label>                        
+                        <label for="password">
+                            <h2 id="Password">Password</h2>
+                            <input type="password" placeholder="password">                            
+                        </label>   
+                        <input type="button" value="login">                     
+                    </form>
+                </div>
+
+                   
+
+                
+              
+            </main>
+
+            <script src="../../../Pages/htmlNotes/app.js"></script>
+            <script src="../../../jsFiles/script.js"></script>
+        </body>
+
+    </html>
