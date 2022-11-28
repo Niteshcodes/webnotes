@@ -56,3 +56,13 @@ input[type=button]:hover{
    background-color: white;
    font-weight: bold;
 }
+
+.forms{
+    width: 80vw;
+    height: 90vh;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
