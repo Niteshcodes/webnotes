@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="CssFiles/style.css" />
+    <link rel="stylesheet" href="CssFiles/mobile.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <title>Complete Web-Devlopmet Notes</title>
+  </head>
+  <body>
+    <nav id="menu">
+      <ul type="none">
+        <img src="img/logo.png" d alt="logo" />
+        <li><a href="#main" id="hm" class="ul"> Home</a></li>
+        <div class="dropdown">
+          <button class="dropbtn">
+            Notes
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="Pages/htmlNotes/html.html" class="ul">HTML</a>
+            <a href="Pages/cssNotes/css.html">CSS</a>
+            <a href="Pages/jsNotes/js.html" class="ul">JavaScript</a>
+            <a href="Pages/project/project.html">Project</a>
+          </div>
+        </div>
+        <li><a href="#contect" id="con" class="ul">Contect us</a></li>
+      </ul>
+
+      <i class="fa fa-times" aria-hidden="true" id="close-menu"></i>
+    </nav>
+
+    <main id="main">
+      <section
+        id="intro"
+        class="animate__animated animate__fadeInUp animate__delay-0.5s"
+      >
+        <i class="fa fa-bars" aria-hidden="true" id="menu-bar"></i>
+        <div
+          id="left"
+          class="left animate__animated animate__fadeInLeft animate__delay-0.15s"
+        >
+          <h1 class="h1">Introduction</h1>
+          <p>
+            Hello There!<br />
+            We are here to Provide complete Notes and
+            <br />
+            relevant Study material <br />Of
+            <span class="large">Web-Development</span>
+          </p>
+        </div>
+        <div
+          id="right"
+          class="right animate__animated animate__fadeInRight animate__delay-0.15s"
+        >
+          <img class="logo" src="img/logo.png" alt="logo" />
+        </div>
+      </section>
+    </main>
+
+    <footer id="contect">
+      <!-- <a href="/index.html"><i class="fa fa-bars" aria-hidden="true" id="menu-bar"></i></a> -->
+      <h1>Contect us</h1>
+
+      <div
+        class="form animate__animated animate__fadeInRight animate__delay-0.5s"
+      >
+        <form action="#">
+          <label class="text" for="name">
+            <i class="fa fa-user" aria-hidden="true"></i> Name: <br />
+            <input
+              type="text"
+              class="textbox"
+              id="name"
+              name="name"
+              placeholder="Enter your name.."
+              required
+            />
+          </label>
+          <label class="text" for="Email">
+            <i class="fa fa-envelope" aria-hidden="true"></i> Email: <br />
+            <input
+              type="email"
+              id="Email"
+              name="Email"
+              class="textbox"
+              placeholder="Enter your Email.."
+              required
+          /></label>
+          <label for="msg" class="text">
+            <i class="fa fa-pencil" aria-hidden="true"></i>Message:
+            <br />
+            <textarea
+              name="msg"
+              id="msg"
+              cols="30"
+              rows="10"
+              placeholder="write message..."
+              required
+            ></textarea>
+          </label>
+          <button type="submit" id="sub">Send</button>
+        </form>
+      </div>
+
+      <hr />
+
+      <div
+        class="main animate__animated animate__fadeInLeft animate__delay-0.15s"
+      >
+        <ul id="socl" type="none">
+          <li><i class="fa fa-facebook" aria-hidden="true"></i></li>
+          <li><i class="fa fa-instagram" aria-hidden="true"></i></li>
+          <li><i class="fa fa-linkedin" aria-hidden="true"></i></li>
+        </ul>
+        <ul class="contect" type="none">
+          <li>
+            <i class="fa fa-envelope" aria-hidden="true"> Nitesh@sample.com</i>
+          </li>
+
+          <li><i class="fa fa-mobile" aria-hidden="true"> 9876543210</i></li>
+        </ul>
+      </div>
+    </footer>
+    <script>
+      let home = document.getElementById("main");
+      let foot = document.getElementById("contect");
+      let h = document.getElementById("hm");
+      let con = document.getElementById("con");
+     
+
+      let menu = document.getElementById("menu");
+      let cl = document.getElementById("close-menu");
+      let menu_bar = document.getElementById("menu-bar");
+
+      cl.addEventListener("click", () => {
+        menu.style = "display:none;";
+      });
+      con.addEventListener("click", () => {
+        if(window.screen.width<825){
+        menu.style = "display:none;";
+        }
+      });
+      hm.addEventListener("click", () => {
+        if(window.screen.width<825){
+        menu.style = "display:none;";
+        }
+      });
+
+      menu_bar.addEventListener("click", () => {
+        menu.style = "display:flex;";
+      });
+
+      console.log(name);
+      h.addEventListener("click", () => {
+        foot.style = "display:none; opacity:0 ";
+        home.style = "display:block; animation:transition 0.7s ";
+      });
+      con.addEventListener("click", () => {
+        home.style = "display:none; opacity:0; ";
+        foot.style = "display:block; animation:transition 0.7s";
+      });
+
+      // menu.addEventListener("click", () => {
+      //   name.style = "display:flex;";
+      // });
+      // onoff.addEventListener("click", () => {
+      //   name.style = "display:none";
+      // });
+      // ul.addEventListener('click',()=>{
+      //   name.style="display:none";
+
+      // })
+    </script>
+  </body>
+</html>

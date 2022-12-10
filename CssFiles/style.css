@@ -1,0 +1,337 @@
+/* additional classes  */
+
+.large{
+    font-size: 134%;
+    padding: 5px;
+    color: red;
+    font-weight: bold;
+}
+
+.h1{
+    padding: 5px 0;
+}
+
+.logo {
+    width: 134%;
+    margin-left: -36%;
+}
+
+button:hover{
+  cursor: pointer;
+
+
+}
+#close-menu{
+  filter:opacity(0);
+}
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  scroll-behavior:smooth ;
+}
+
+/* navigation bar  */
+
+header {
+  position: sticky;
+  top: 0;
+  filter: drop-shadow(0px 0px 20px rgba(91, 250, 255, 0.731));
+  /* z-index: 999; */
+}
+
+nav {
+  width: 100%;
+  background: rgb(1, 200, 255);
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 1vh 0;
+  overflow-y: hidden;
+}
+
+
+
+nav ul img {
+  width: 50px;
+  margin-left: 12px;
+}
+
+nav ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 32px;
+  cursor: pointer;
+  height: fit-content;
+  
+}
+
+nav ul li a:hover {
+  color: rgb(23, 157, 211);
+  background-color: black;
+  padding: 4px;
+  border-radius: 5px;
+  
+}
+a{
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 1.5vw;
+}
+
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: rgb(0, 0, 0);
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  text-decoration: none;
+  
+  font-weight: bold;
+  font-size: 1.5vw;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  color: rgb(23, 157, 211);
+  background-color: black;
+  /* padding: 14px 0; */
+  border-radius: 5px;  
+  border: none;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #66afaf;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+select#notes {
+  height: fit-content;
+  background-color: transparent;
+  border: none;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 1.3vw;
+}
+select#notes:hover {
+  color: rgb(23, 157, 211);
+  background-color: black;
+  padding: 4px;
+  border-radius: 5px;  
+  border: none;
+}
+
+#menu-bar{
+  display: none;
+}
+
+
+
+
+
+/* main  */
+
+
+
+
+section#intro {
+  /* position: relative; */
+  background-color: black;
+  display: flex;
+  height: 90vh;
+  justify-content: center;
+  align-items: center;
+  padding: 0 17px;
+  color: white;
+  top: 0;
+  z-index: -21;
+}
+
+
+.left {
+    width: 50%;
+    padding-left: 9%;
+   
+    
+}
+.left h1 {
+  color: rgb(21, 209, 226);
+  font-size: 2.5vw;
+}
+
+.left p {
+    padding: 3% 0;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    padding-left: 3%;
+    width: 23%;
+}
+
+/* footer  */
+footer{
+  display: none;
+  height: fit-content;
+  text-align: center;
+  background-color: black;
+  color: rgb(254, 253, 253);
+  /* margin-top: 20vh; */
+  
+
+
+}
+
+
+/* form  */
+
+form{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  /* align-items: center; */
+  margin-bottom:1% ;
+  width: fit-content;
+  padding: 1% 0;
+  color: red;
+  font-size: 107%;
+
+
+
+}
+.text{
+  padding: 12px 0;
+}
+.textbox {
+  margin-top: 10px;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 4px;
+  padding: 3px 5px;
+  width: 30vw;
+  
+}
+.form{
+  width: 40vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2.6vh auto;
+  border: 2px solid red;
+  border-radius: 5px;
+  background-color: gray;
+  filter: drop-shadow(1px 1px 10px red);
+}
+
+textarea{
+  width: 30vw;
+  margin-top: 12px;
+  background-color: transparent;
+  border: 1px solid white;
+
+}
+::placeholder{
+  color: black;
+  padding: 10px;
+
+}
+#sub{
+  width: 27%;
+  background-color: blue;
+  padding: 9px 0;
+  color: wheat;
+  border: none;
+  border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.main{
+  display: flex;
+}
+#socl{
+  color:white;
+  display: flex;
+
+}
+#socl li i{
+  padding: 12px;
+  }
+
+  .contect{
+    display: flex;
+    position: absolute;
+    right: 0;
+    
+
+  }
+
+  .contect li i{
+    padding: 12px;
+  }
+  i:hover{
+    color: red;
+    cursor: pointer;
+  }
+
+
+
+

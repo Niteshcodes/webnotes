@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+
+    </style>
+
+</head>
+<body>
+
+    <center>
+    <h2>JavaScript Validation</h2>
+
+<form name="myForm" action="#" onsubmit="return validateForm()" method="post">
+  Name: <input type="text" name="fname" placeholder="Enter Name" id="name">
+  <br><br>
+  Mob: <input type="number" placeholder="Enter Mobile Number" name="mob">
+  <br>
+  <br>
+  <input type="submit" value="Submit">
+</form>
+</center>
+
+<script>
+    function validateForm() {
+      let x = document.forms["myForm"]["fname"].value;
+      let Y = document.forms["myForm"]["mob"].value;
+      let ele=document.querySelector('#name');
+      let str='';
+      for(i = 0; i < ele.length; i++) {
+                    
+                    str=ele[i].value;
+                 };
+    
+    
+      if (x == "") {
+        alert(" Name must be filled out");
+        return false;
+      }
+      else if(Y==""){
+        alert("Mobile Number must be filled out");
+        return false;
+      }
+      else if(/\d/. test(str)==false){
+        
+        // /\d/.test() is a function to check whether a string contains any of [0,9]
+    
+        alert("Numbers are not allowed in name")   
+        return false;
+        
+      }
+      else{
+        return true;
+      }
+    }
+    </script>
+
+</body>
+</html>

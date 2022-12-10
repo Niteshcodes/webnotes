@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document-Write</title>
+</head>
+<body>
+
+    <p>
+        Select a radio button and click on Submit.
+    </p>
+      
+    Gender:
+    <input type="radio" name="gender" value="Male">Male
+    <input type="radio" name="gender" value="Female">Female
+    <input type="radio" name="gender" value="Others">Others
+      
+    <br>
+    <input type="text" name="msg" placeholder="Enter your Name">
+    <br><br>
+      
+    <button type="button" onclick="displayRadioValue()">
+        Submit
+    </button>
+      
+    <br>
+      
+    <div id="result"></div>
+      
+    <script>
+        function displayRadioValue() {
+            var ele = document.getElementsByName('gender');
+            var ele1 = document.getElementsByName('msg');
+              
+            for(i = 0; i < ele.length; i++) {
+                if(ele[i].checked)
+                document.getElementById("result").innerHTML
+                        = "Gender: "+ele[i].value +"<br>"+"message: "+ele1[i].value;
+            }
+        }
+    </script>
+ 
+</body>
+</html>

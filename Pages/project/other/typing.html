@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spelling checker</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        background-image: linear-gradient(97deg,rgb(242, 226, 155), rgb(217, 203, 176));
+        text-align: center;
+        
+        /* pad: 5px; */
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        
+        align-items: center;
+    }
+    .pera{
+        font-size: 190%;
+        margin: 12px auto;
+        padding: 0;
+        font-weight:bold;
+        color: rgb(21, 37, 178);
+    }
+    h5{
+        margin: 12px auto;
+        font-style: italic;
+    }
+    textarea{
+        background-color: transparent;
+        width: 70%;
+        border: 2px solid rgba(100, 92, 92, 0.371);
+        border-radius: 5px;
+        margin-top: 9vh;
+        margin-bottom: 9px;
+        padding: 12px;
+    }
+    button{
+        background-color: transparent;
+        padding: 3px 5px;
+        border-radius: 5px;
+        border-color: rgb(30, 37, 226);
+        cursor: pointer;
+        filter: drop-shadow(2px 2px 7px red);
+        margin: 20px auto 0 auto;
+    }
+    button:hover{
+        background-color: black;
+        color: white;
+        
+    }
+    #out{
+        margin: 12px auto;
+        color: rgb(21, 12, 117);
+        
+
+    }
+
+</style>
+
+<body>
+    <main>
+        <p class="pera">Welcome to my spelling checker <br>
+            <h5>Enter your sentence in the box given below</h5>
+        </p>
+
+
+        <h2 id="msg">
+        
+        </h2>
+
+        <textarea name="question" id="question" cols="30" rows="10" placeholder="Enter your text here..."></textarea>
+
+        <p id="out">start the Game 👉 <button  id="btn">Start</button></p> 
+
+        
+    </main>
+    
+      
+  
+    <script>
+        const setOfWords=["hello my name is nitesh.","i am good boy.","this is a profacinol typing game.","it helps you to increse your typing speed and make you a good in typing"];
+        const msg=document.getElementById("msg");
+        const typewords=document.getElementById("question");
+        const btn=document.getElementById("btn");
+        let startTime,endtime;
+       const  playgame = () => {
+            let randomenumber=Math.floor(Math.random()*setOfWords.length);
+            msg.innerText=setOfWords[randomenumber];
+            let date=new Date();
+            startTime=date.getTime();
+            btn.innerText="Stop";
+        }
+        const endPlay = ()=>{
+            let date=new Date();
+            endTime=date.getTime();
+            let totalTime=((endTime - startTime)/1000);
+            let totalstr=typewords.value;
+            let wordCount = wordCounter(totalstr);
+            let speed = Math.round((wordCount/totalTime)*60);
+            let finalMsg ="your typing speed is "+speed+"WPM "+"<br>";            
+            finalMsg+=compareWords(msg.innerText,totalstr);
+            msg.innerHTML=finalMsg;
+        }
+
+        const compareWords = (str1,str2) =>{
+            let w1=str1.split(" ");
+            let w2=str2.split(" ");
+            let cnt=0;
+            w1.forEach(function(item,index){
+                if(item==w2[index]){
+                    cnt++;
+                }
+            });
+            let errw=(w1.length -cnt);
+            return ("correct words:"+cnt+"<br>"+"total words: "+w1.length +"<br>" + "Wrong Words: "+errw);
+        }
+        const wordCounter =(str) =>{
+            let respose = str.split(" ").length;
+            return respose;            
+        }
+        btn.addEventListener("click",function(){
+            if(this.innerText=='Start'){
+                typewords.disabled==false;
+                playgame();
+            }
+            else if(this.innerText=="Stop"){
+                typewords.disabled=true;
+                btn.innerText="Start";
+                endPlay();
+            }
+        })
+
+
+    </script>
+</body>
+</html>
